@@ -39,12 +39,12 @@
             this.newTrackBox = new System.Windows.Forms.TextBox();
             this.newArtistBox = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.currentGenreLabel = new System.Windows.Forms.Label();
+            this.currentAlbumLabel = new System.Windows.Forms.Label();
+            this.currentTrackLabel = new System.Windows.Forms.Label();
+            this.currentArtistLabel = new System.Windows.Forms.Label();
             this.SelectFileButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.currentArtistLabel = new System.Windows.Forms.Label();
-            this.currentTrackLabel = new System.Windows.Forms.Label();
-            this.currentAlbumLabel = new System.Windows.Forms.Label();
-            this.currentGenreLabel = new System.Windows.Forms.Label();
             this.activeFilePathLabel = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -160,6 +160,42 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Current Data";
             // 
+            // currentGenreLabel
+            // 
+            this.currentGenreLabel.AutoSize = true;
+            this.currentGenreLabel.Location = new System.Drawing.Point(6, 246);
+            this.currentGenreLabel.Name = "currentGenreLabel";
+            this.currentGenreLabel.Size = new System.Drawing.Size(116, 20);
+            this.currentGenreLabel.TabIndex = 3;
+            this.currentGenreLabel.Text = "[ Genre Name ]";
+            // 
+            // currentAlbumLabel
+            // 
+            this.currentAlbumLabel.AutoSize = true;
+            this.currentAlbumLabel.Location = new System.Drawing.Point(7, 174);
+            this.currentAlbumLabel.Name = "currentAlbumLabel";
+            this.currentAlbumLabel.Size = new System.Drawing.Size(116, 20);
+            this.currentAlbumLabel.TabIndex = 2;
+            this.currentAlbumLabel.Text = "[ Album Name ]";
+            // 
+            // currentTrackLabel
+            // 
+            this.currentTrackLabel.AutoSize = true;
+            this.currentTrackLabel.Location = new System.Drawing.Point(7, 106);
+            this.currentTrackLabel.Name = "currentTrackLabel";
+            this.currentTrackLabel.Size = new System.Drawing.Size(110, 20);
+            this.currentTrackLabel.TabIndex = 1;
+            this.currentTrackLabel.Text = "[ Track Name ]";
+            // 
+            // currentArtistLabel
+            // 
+            this.currentArtistLabel.AutoSize = true;
+            this.currentArtistLabel.Location = new System.Drawing.Point(7, 35);
+            this.currentArtistLabel.Name = "currentArtistLabel";
+            this.currentArtistLabel.Size = new System.Drawing.Size(108, 20);
+            this.currentArtistLabel.TabIndex = 0;
+            this.currentArtistLabel.Text = "[ Artist Name ]";
+            // 
             // SelectFileButton
             // 
             this.SelectFileButton.Location = new System.Drawing.Point(596, 16);
@@ -173,42 +209,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // currentArtistLabel
-            // 
-            this.currentArtistLabel.AutoSize = true;
-            this.currentArtistLabel.Location = new System.Drawing.Point(7, 35);
-            this.currentArtistLabel.Name = "currentArtistLabel";
-            this.currentArtistLabel.Size = new System.Drawing.Size(108, 20);
-            this.currentArtistLabel.TabIndex = 0;
-            this.currentArtistLabel.Text = "[ Artist Name ]";
-            // 
-            // currentTrackLabel
-            // 
-            this.currentTrackLabel.AutoSize = true;
-            this.currentTrackLabel.Location = new System.Drawing.Point(7, 106);
-            this.currentTrackLabel.Name = "currentTrackLabel";
-            this.currentTrackLabel.Size = new System.Drawing.Size(110, 20);
-            this.currentTrackLabel.TabIndex = 1;
-            this.currentTrackLabel.Text = "[ Track Name ]";
-            // 
-            // currentAlbumLabel
-            // 
-            this.currentAlbumLabel.AutoSize = true;
-            this.currentAlbumLabel.Location = new System.Drawing.Point(7, 174);
-            this.currentAlbumLabel.Name = "currentAlbumLabel";
-            this.currentAlbumLabel.Size = new System.Drawing.Size(116, 20);
-            this.currentAlbumLabel.TabIndex = 2;
-            this.currentAlbumLabel.Text = "[ Album Name ]";
-            // 
-            // currentGenreLabel
-            // 
-            this.currentGenreLabel.AutoSize = true;
-            this.currentGenreLabel.Location = new System.Drawing.Point(6, 246);
-            this.currentGenreLabel.Name = "currentGenreLabel";
-            this.currentGenreLabel.Size = new System.Drawing.Size(116, 20);
-            this.currentGenreLabel.TabIndex = 3;
-            this.currentGenreLabel.Text = "[ Genre Name ]";
             // 
             // activeFilePathLabel
             // 
