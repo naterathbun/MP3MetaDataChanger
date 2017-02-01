@@ -33,6 +33,12 @@
             this.updateAlbumButton = new System.Windows.Forms.Button();
             this.updateGenreButton = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.renameFileBox = new System.Windows.Forms.TextBox();
+            this.mp3FileFormatLabel = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.currentFileNameLabel = new System.Windows.Forms.Label();
+            this.renameFileButton = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.newGenreBox = new System.Windows.Forms.TextBox();
             this.newAlbumBox = new System.Windows.Forms.TextBox();
@@ -46,19 +52,13 @@
             this.SelectFileButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.activeFilePathLabel = new System.Windows.Forms.Label();
-            this.renameFileButton = new System.Windows.Forms.Button();
-            this.renameFileBox = new System.Windows.Forms.TextBox();
-            this.mp3FileFormatLabel = new System.Windows.Forms.Label();
             this.FileLocationBox = new System.Windows.Forms.GroupBox();
-            this.currentFileNameLabel = new System.Windows.Forms.Label();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.FileLocationBox.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // updateArtistButton
@@ -117,6 +117,62 @@
             this.groupBox1.Size = new System.Drawing.Size(978, 444);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.renameFileBox);
+            this.groupBox5.Controls.Add(this.mp3FileFormatLabel);
+            this.groupBox5.Location = new System.Drawing.Point(423, 337);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(392, 89);
+            this.groupBox5.TabIndex = 10;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Update File Name";
+            // 
+            // renameFileBox
+            // 
+            this.renameFileBox.Location = new System.Drawing.Point(25, 35);
+            this.renameFileBox.Name = "renameFileBox";
+            this.renameFileBox.Size = new System.Drawing.Size(311, 26);
+            this.renameFileBox.TabIndex = 4;
+            // 
+            // mp3FileFormatLabel
+            // 
+            this.mp3FileFormatLabel.AutoSize = true;
+            this.mp3FileFormatLabel.Location = new System.Drawing.Point(342, 38);
+            this.mp3FileFormatLabel.Name = "mp3FileFormatLabel";
+            this.mp3FileFormatLabel.Size = new System.Drawing.Size(44, 20);
+            this.mp3FileFormatLabel.TabIndex = 8;
+            this.mp3FileFormatLabel.Text = ".mp3";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.currentFileNameLabel);
+            this.groupBox4.Location = new System.Drawing.Point(14, 337);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(392, 89);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Current File Name";
+            // 
+            // currentFileNameLabel
+            // 
+            this.currentFileNameLabel.AutoSize = true;
+            this.currentFileNameLabel.Location = new System.Drawing.Point(6, 38);
+            this.currentFileNameLabel.Name = "currentFileNameLabel";
+            this.currentFileNameLabel.Size = new System.Drawing.Size(96, 20);
+            this.currentFileNameLabel.TabIndex = 4;
+            this.currentFileNameLabel.Text = "[ File Name ]";
+            // 
+            // renameFileButton
+            // 
+            this.renameFileButton.Location = new System.Drawing.Point(832, 357);
+            this.renameFileButton.Name = "renameFileButton";
+            this.renameFileButton.Size = new System.Drawing.Size(135, 56);
+            this.renameFileButton.TabIndex = 7;
+            this.renameFileButton.Text = "Rename File";
+            this.renameFileButton.UseVisualStyleBackColor = true;
+            this.renameFileButton.Click += new System.EventHandler(this.renameFileButton_Click);
             // 
             // groupBox3
             // 
@@ -230,32 +286,6 @@
             this.activeFilePathLabel.Size = new System.Drawing.Size(0, 20);
             this.activeFilePathLabel.TabIndex = 6;
             // 
-            // renameFileButton
-            // 
-            this.renameFileButton.Location = new System.Drawing.Point(832, 357);
-            this.renameFileButton.Name = "renameFileButton";
-            this.renameFileButton.Size = new System.Drawing.Size(135, 56);
-            this.renameFileButton.TabIndex = 7;
-            this.renameFileButton.Text = "Rename File";
-            this.renameFileButton.UseVisualStyleBackColor = true;
-            this.renameFileButton.Click += new System.EventHandler(this.renameFileButton_Click);
-            // 
-            // renameFileBox
-            // 
-            this.renameFileBox.Location = new System.Drawing.Point(25, 35);
-            this.renameFileBox.Name = "renameFileBox";
-            this.renameFileBox.Size = new System.Drawing.Size(311, 26);
-            this.renameFileBox.TabIndex = 4;
-            // 
-            // mp3FileFormatLabel
-            // 
-            this.mp3FileFormatLabel.AutoSize = true;
-            this.mp3FileFormatLabel.Location = new System.Drawing.Point(342, 38);
-            this.mp3FileFormatLabel.Name = "mp3FileFormatLabel";
-            this.mp3FileFormatLabel.Size = new System.Drawing.Size(44, 20);
-            this.mp3FileFormatLabel.TabIndex = 8;
-            this.mp3FileFormatLabel.Text = ".mp3";
-            // 
             // FileLocationBox
             // 
             this.FileLocationBox.Controls.Add(this.activeFilePathLabel);
@@ -266,60 +296,32 @@
             this.FileLocationBox.TabStop = false;
             this.FileLocationBox.Text = "File Location";
             // 
-            // currentFileNameLabel
-            // 
-            this.currentFileNameLabel.AutoSize = true;
-            this.currentFileNameLabel.Location = new System.Drawing.Point(6, 38);
-            this.currentFileNameLabel.Name = "currentFileNameLabel";
-            this.currentFileNameLabel.Size = new System.Drawing.Size(96, 20);
-            this.currentFileNameLabel.TabIndex = 4;
-            this.currentFileNameLabel.Text = "[ File Name ]";
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.currentFileNameLabel);
-            this.groupBox4.Location = new System.Drawing.Point(14, 337);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(392, 89);
-            this.groupBox4.TabIndex = 9;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Current File Name";
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.renameFileBox);
-            this.groupBox5.Controls.Add(this.mp3FileFormatLabel);
-            this.groupBox5.Location = new System.Drawing.Point(423, 337);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(392, 89);
-            this.groupBox5.TabIndex = 10;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Update File Name";
-            // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(144F, 144F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(1002, 607);
             this.Controls.Add(this.FileLocationBox);
             this.Controls.Add(this.SelectFileButton);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MP3 Meta Data Changer";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.FileLocationBox.ResumeLayout(false);
             this.FileLocationBox.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox4.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
 
         }
