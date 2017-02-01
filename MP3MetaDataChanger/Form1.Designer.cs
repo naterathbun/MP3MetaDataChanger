@@ -46,9 +46,19 @@
             this.SelectFileButton = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.activeFilePathLabel = new System.Windows.Forms.Label();
+            this.renameFileButton = new System.Windows.Forms.Button();
+            this.renameFileBox = new System.Windows.Forms.TextBox();
+            this.mp3FileFormatLabel = new System.Windows.Forms.Label();
+            this.FileLocationBox = new System.Windows.Forms.GroupBox();
+            this.currentFileNameLabel = new System.Windows.Forms.Label();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.FileLocationBox.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // updateArtistButton
@@ -93,18 +103,20 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.groupBox5);
+            this.groupBox1.Controls.Add(this.groupBox4);
+            this.groupBox1.Controls.Add(this.renameFileButton);
             this.groupBox1.Controls.Add(this.groupBox3);
             this.groupBox1.Controls.Add(this.groupBox2);
             this.groupBox1.Controls.Add(this.updateArtistButton);
             this.groupBox1.Controls.Add(this.updateTrackButton);
             this.groupBox1.Controls.Add(this.updateGenreButton);
             this.groupBox1.Controls.Add(this.updateAlbumButton);
-            this.groupBox1.Location = new System.Drawing.Point(12, 78);
+            this.groupBox1.Location = new System.Drawing.Point(12, 151);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(978, 343);
+            this.groupBox1.Size = new System.Drawing.Size(978, 444);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Modify Meta Data";
             // 
             // groupBox3
             // 
@@ -112,39 +124,39 @@
             this.groupBox3.Controls.Add(this.newAlbumBox);
             this.groupBox3.Controls.Add(this.newTrackBox);
             this.groupBox3.Controls.Add(this.newArtistBox);
-            this.groupBox3.Location = new System.Drawing.Point(434, 24);
+            this.groupBox3.Location = new System.Drawing.Point(423, 24);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(392, 306);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Update Data";
+            this.groupBox3.Text = "Update Meta Data";
             // 
             // newGenreBox
             // 
             this.newGenreBox.Location = new System.Drawing.Point(25, 254);
             this.newGenreBox.Name = "newGenreBox";
-            this.newGenreBox.Size = new System.Drawing.Size(319, 26);
+            this.newGenreBox.Size = new System.Drawing.Size(338, 26);
             this.newGenreBox.TabIndex = 3;
             // 
             // newAlbumBox
             // 
             this.newAlbumBox.Location = new System.Drawing.Point(25, 183);
             this.newAlbumBox.Name = "newAlbumBox";
-            this.newAlbumBox.Size = new System.Drawing.Size(319, 26);
+            this.newAlbumBox.Size = new System.Drawing.Size(338, 26);
             this.newAlbumBox.TabIndex = 2;
             // 
             // newTrackBox
             // 
             this.newTrackBox.Location = new System.Drawing.Point(25, 115);
             this.newTrackBox.Name = "newTrackBox";
-            this.newTrackBox.Size = new System.Drawing.Size(319, 26);
+            this.newTrackBox.Size = new System.Drawing.Size(338, 26);
             this.newTrackBox.TabIndex = 1;
             // 
             // newArtistBox
             // 
             this.newArtistBox.Location = new System.Drawing.Point(25, 44);
             this.newArtistBox.Name = "newArtistBox";
-            this.newArtistBox.Size = new System.Drawing.Size(319, 26);
+            this.newArtistBox.Size = new System.Drawing.Size(338, 26);
             this.newArtistBox.TabIndex = 0;
             // 
             // groupBox2
@@ -158,12 +170,12 @@
             this.groupBox2.Size = new System.Drawing.Size(392, 306);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Current Data";
+            this.groupBox2.Text = "Current Meta Data";
             // 
             // currentGenreLabel
             // 
             this.currentGenreLabel.AutoSize = true;
-            this.currentGenreLabel.Location = new System.Drawing.Point(6, 246);
+            this.currentGenreLabel.Location = new System.Drawing.Point(6, 257);
             this.currentGenreLabel.Name = "currentGenreLabel";
             this.currentGenreLabel.Size = new System.Drawing.Size(116, 20);
             this.currentGenreLabel.TabIndex = 3;
@@ -172,7 +184,7 @@
             // currentAlbumLabel
             // 
             this.currentAlbumLabel.AutoSize = true;
-            this.currentAlbumLabel.Location = new System.Drawing.Point(7, 174);
+            this.currentAlbumLabel.Location = new System.Drawing.Point(6, 186);
             this.currentAlbumLabel.Name = "currentAlbumLabel";
             this.currentAlbumLabel.Size = new System.Drawing.Size(116, 20);
             this.currentAlbumLabel.TabIndex = 2;
@@ -181,7 +193,7 @@
             // currentTrackLabel
             // 
             this.currentTrackLabel.AutoSize = true;
-            this.currentTrackLabel.Location = new System.Drawing.Point(7, 106);
+            this.currentTrackLabel.Location = new System.Drawing.Point(6, 118);
             this.currentTrackLabel.Name = "currentTrackLabel";
             this.currentTrackLabel.Size = new System.Drawing.Size(110, 20);
             this.currentTrackLabel.TabIndex = 1;
@@ -190,7 +202,7 @@
             // currentArtistLabel
             // 
             this.currentArtistLabel.AutoSize = true;
-            this.currentArtistLabel.Location = new System.Drawing.Point(7, 35);
+            this.currentArtistLabel.Location = new System.Drawing.Point(6, 47);
             this.currentArtistLabel.Name = "currentArtistLabel";
             this.currentArtistLabel.Size = new System.Drawing.Size(108, 20);
             this.currentArtistLabel.TabIndex = 0;
@@ -213,18 +225,83 @@
             // activeFilePathLabel
             // 
             this.activeFilePathLabel.AutoSize = true;
-            this.activeFilePathLabel.Location = new System.Drawing.Point(26, 451);
+            this.activeFilePathLabel.Location = new System.Drawing.Point(10, 29);
             this.activeFilePathLabel.Name = "activeFilePathLabel";
-            this.activeFilePathLabel.Size = new System.Drawing.Size(161, 20);
+            this.activeFilePathLabel.Size = new System.Drawing.Size(0, 20);
             this.activeFilePathLabel.TabIndex = 6;
-            this.activeFilePathLabel.Text = "[ Active File Pathway ]";
+            // 
+            // renameFileButton
+            // 
+            this.renameFileButton.Location = new System.Drawing.Point(832, 357);
+            this.renameFileButton.Name = "renameFileButton";
+            this.renameFileButton.Size = new System.Drawing.Size(135, 56);
+            this.renameFileButton.TabIndex = 7;
+            this.renameFileButton.Text = "Rename File";
+            this.renameFileButton.UseVisualStyleBackColor = true;
+            this.renameFileButton.Click += new System.EventHandler(this.renameFileButton_Click);
+            // 
+            // renameFileBox
+            // 
+            this.renameFileBox.Location = new System.Drawing.Point(25, 35);
+            this.renameFileBox.Name = "renameFileBox";
+            this.renameFileBox.Size = new System.Drawing.Size(311, 26);
+            this.renameFileBox.TabIndex = 4;
+            // 
+            // mp3FileFormatLabel
+            // 
+            this.mp3FileFormatLabel.AutoSize = true;
+            this.mp3FileFormatLabel.Location = new System.Drawing.Point(342, 38);
+            this.mp3FileFormatLabel.Name = "mp3FileFormatLabel";
+            this.mp3FileFormatLabel.Size = new System.Drawing.Size(44, 20);
+            this.mp3FileFormatLabel.TabIndex = 8;
+            this.mp3FileFormatLabel.Text = ".mp3";
+            // 
+            // FileLocationBox
+            // 
+            this.FileLocationBox.Controls.Add(this.activeFilePathLabel);
+            this.FileLocationBox.Location = new System.Drawing.Point(12, 78);
+            this.FileLocationBox.Name = "FileLocationBox";
+            this.FileLocationBox.Size = new System.Drawing.Size(978, 65);
+            this.FileLocationBox.TabIndex = 9;
+            this.FileLocationBox.TabStop = false;
+            this.FileLocationBox.Text = "File Location";
+            // 
+            // currentFileNameLabel
+            // 
+            this.currentFileNameLabel.AutoSize = true;
+            this.currentFileNameLabel.Location = new System.Drawing.Point(6, 38);
+            this.currentFileNameLabel.Name = "currentFileNameLabel";
+            this.currentFileNameLabel.Size = new System.Drawing.Size(96, 20);
+            this.currentFileNameLabel.TabIndex = 4;
+            this.currentFileNameLabel.Text = "[ File Name ]";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.currentFileNameLabel);
+            this.groupBox4.Location = new System.Drawing.Point(14, 337);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(392, 89);
+            this.groupBox4.TabIndex = 9;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Current File Name";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.renameFileBox);
+            this.groupBox5.Controls.Add(this.mp3FileFormatLabel);
+            this.groupBox5.Location = new System.Drawing.Point(423, 337);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(392, 89);
+            this.groupBox5.TabIndex = 10;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Update File Name";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1002, 502);
-            this.Controls.Add(this.activeFilePathLabel);
+            this.ClientSize = new System.Drawing.Size(1002, 607);
+            this.Controls.Add(this.FileLocationBox);
             this.Controls.Add(this.SelectFileButton);
             this.Controls.Add(this.groupBox1);
             this.MaximizeBox = false;
@@ -237,8 +314,13 @@
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.FileLocationBox.ResumeLayout(false);
+            this.FileLocationBox.PerformLayout();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -262,6 +344,13 @@
         private System.Windows.Forms.Label currentTrackLabel;
         private System.Windows.Forms.Label currentArtistLabel;
         private System.Windows.Forms.Label activeFilePathLabel;
+        private System.Windows.Forms.Button renameFileButton;
+        private System.Windows.Forms.TextBox renameFileBox;
+        private System.Windows.Forms.Label mp3FileFormatLabel;
+        private System.Windows.Forms.GroupBox FileLocationBox;
+        private System.Windows.Forms.Label currentFileNameLabel;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupBox4;
     }
 }
 

@@ -13,7 +13,8 @@ namespace MP3MetaDataChanger
     public partial class Form1 : Form
     {
         public string FilePathOfSelectedMP3 { get; set; } = "";
-
+        public string FilePathOfWorkingDirectory { get; set; } = "";
+        
         // Form Required
         public Form1()
         {
@@ -25,12 +26,6 @@ namespace MP3MetaDataChanger
         {
 
         }
-
-
-
-
-
-
         
 
         // Button Event Handlers
@@ -59,16 +54,34 @@ namespace MP3MetaDataChanger
             WriteUserEnteredGenreToFile();
         }
 
+        private void renameFileButton_Click(object sender, EventArgs e)
+        {
+            RenameFileToUserEnteredName();
+        }
 
-        // Get User Selected File Path
 
+        // File IO Methods
         public void GetUserSelectedFilePath()
         {
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
                 FilePathOfSelectedMP3 = openFileDialog1.FileName;
+                FilePathOfWorkingDirectory = System.IO.Path.GetDirectoryName(FilePathOfSelectedMP3);
                 UpdateCurrentMetaInformationLabels();
             }
+        }
+
+        public void RenameFileToUserEnteredName()
+        {
+            if (FilePathOfSelectedMP3 != "" && renameFileBox.Text != "")
+            {
+                System.IO.File.Copy(FilePathOfSelectedMP3, FilePathOfWorkingDirectory + @"\" + renameFileBox.Text + ".mp3");
+                System.IO.File.Delete(FilePathOfSelectedMP3);
+
+                FilePathOfSelectedMP3 = FilePathOfWorkingDirectory + @"\" + renameFileBox.Text + ".mp3";
+                renameFileBox.Text = "";
+            }
+            UpdateCurrentMetaInformationLabels();
         }
 
 
@@ -129,6 +142,7 @@ namespace MP3MetaDataChanger
                 UpdateCurrentAlbumLabel(tagFile);
                 UpdateCurrentGenreLabel(tagFile);
                 UpdateActiveFilePathLabel();
+                UpdateActiveFileNameLabel();
             }
         }
 
@@ -156,5 +170,11 @@ namespace MP3MetaDataChanger
         {
             this.activeFilePathLabel.Text = FilePathOfSelectedMP3;
         }
+
+        public void UpdateActiveFileNameLabel()
+        {
+            currentFileNameLabel.Text = System.IO.Path.GetFileName(FilePathOfSelectedMP3);
+        }
+
     }
 }
