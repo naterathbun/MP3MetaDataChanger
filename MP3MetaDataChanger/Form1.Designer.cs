@@ -272,7 +272,7 @@
             this.SelectFileButton.TabIndex = 5;
             this.SelectFileButton.Text = "Select File";
             this.SelectFileButton.UseVisualStyleBackColor = true;
-            this.SelectFileButton.Click += new System.EventHandler(this.button1_Click);
+            this.SelectFileButton.Click += new System.EventHandler(this.SelectFileButton_Click);
             // 
             // openFileDialog1
             // 
