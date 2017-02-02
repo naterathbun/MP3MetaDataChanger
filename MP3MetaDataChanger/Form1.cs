@@ -118,6 +118,7 @@ namespace MP3MetaDataChanger
                 tagFile.Save();
             }
             UpdateCurrentMetaInformationLabels();
+            ClearNewArtistBox();
         }
 
         public void WriteUserEnteredTitleToFile()
@@ -129,6 +130,7 @@ namespace MP3MetaDataChanger
                 tagFile.Save();
             }
             UpdateCurrentMetaInformationLabels();
+            ClearNewTrackBox();
         }
 
         public void WriteUserEnteredAlbumToFile()
@@ -140,6 +142,7 @@ namespace MP3MetaDataChanger
                 tagFile.Save();
             }
             UpdateCurrentMetaInformationLabels();
+            ClearNewAlbumBox();
         }
 
         public void WriteUserEnteredGenreToFile()
@@ -151,8 +154,31 @@ namespace MP3MetaDataChanger
                 tagFile.Save();
             }
             UpdateCurrentMetaInformationLabels();
+            ClearNewGenreBox();
         }
         
+
+        // Clear Text Boxes After Update
+        public void ClearNewArtistBox()
+        {
+            this.newArtistBox.Text = "";
+        }
+
+        public void ClearNewTrackBox()
+        {
+            this.newTrackBox.Text = "";
+        }
+
+        public void ClearNewAlbumBox()
+        {
+            this.newAlbumBox.Text = "";
+        }
+
+        public void ClearNewGenreBox()
+        {
+            this.newGenreBox.Text = "";
+        }
+
 
         // File IO Methods
         public void GetUserSelectedFilePath()
@@ -198,7 +224,7 @@ namespace MP3MetaDataChanger
         // State Checks
         public bool FileIsSelected()
         {
-            return (FilePathOfSelectedMP3 != "");
+            return (!String.IsNullOrEmpty(FilePathOfSelectedMP3));
         }
 
         public bool RenameFileBoxIsNotBlank()

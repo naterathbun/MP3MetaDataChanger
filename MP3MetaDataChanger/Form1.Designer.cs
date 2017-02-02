@@ -266,6 +266,7 @@
             // 
             // SelectFileButton
             // 
+            this.SelectFileButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SelectFileButton.Location = new System.Drawing.Point(596, 16);
             this.SelectFileButton.Name = "SelectFileButton";
             this.SelectFileButton.Size = new System.Drawing.Size(394, 56);
